@@ -110,15 +110,15 @@
         raise_layer {
             bindings = <
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &trans        &trans        &trans        &trans        &trans        &trans                                      &trans        &trans        &trans        &trans        &trans        &trans
+  &kp C_MUTE &kp C_VOLUME_DOWN&kp C_VOLUME_UP &kp C_BRI_DN  &kp C_BRI_UP &kp C_BKLT_TOG                               &kp C_PP      &kp C_PREV    &kp C_NEXT    &trans        &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &trans        &trans        &trans        &trans        &trans        &kp HOME                                    &kp PG_UP     &trans        &kp UP        &trans        &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &trans        &trans        &trans        &trans        &trans        &kp END                                     &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4&rgb_ug RGB_TOG   &trans        &trans        &trans        &trans        &trans        &trans        &trans
+    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans          &trans        &trans        &trans        &trans        &trans        &trans        &trans
 //╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans
+                                &trans        &trans        &trans        &trans        &trans        &rgb_ug RGB_TOG &trans        &trans        &trans        &trans
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
