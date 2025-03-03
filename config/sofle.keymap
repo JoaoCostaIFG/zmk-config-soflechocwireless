@@ -68,6 +68,20 @@
 
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp BSPC>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -116,7 +130,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &trans        &trans        &trans        &trans        &trans        &kp END                                     &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans          &kp RALT      &trans        &trans        &trans        &trans        &trans        &trans
+    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans          &kp DEL       &trans        &trans        &trans        &trans        &trans        &trans
 //╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                 &trans        &trans        &trans        &trans        &trans        &rgb_ug RGB_TOG &trans        &trans        &trans        &trans
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
