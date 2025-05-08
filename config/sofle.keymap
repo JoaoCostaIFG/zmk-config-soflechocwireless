@@ -95,14 +95,6 @@
         };
     };
 
-    behaviors {
-        rot_scroll: rot_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp K_SCROLL_DOWN>, <&kp K_SCROLL_UP>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -121,7 +113,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -139,7 +131,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -157,7 +149,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         adjust_layer {
@@ -175,7 +167,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
