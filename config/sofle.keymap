@@ -88,7 +88,7 @@
             key-positions = <22 23>;
             bindings = <&kp BSPC>;
         };
-        combo_bspc {
+        combo_mb3 {
             timeout-ms = <50>;
             key-positions = <14 25>;
             bindings = <&mkp MB3>;
