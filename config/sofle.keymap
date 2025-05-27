@@ -97,13 +97,13 @@
         combo_mb4 {
             timeout-ms = <50>;
             key-positions = <13 25>;
-            bindings = <&mkp MB3>;
+            bindings = <&mkp MB4>;
             layers = <1>;
         };
         combo_mb5 {
             timeout-ms = <50>;
             key-positions = <15 27>;
-            bindings = <&mkp MB3>;
+            bindings = <&mkp MB5>;
             layers = <1>;
         };
     };
