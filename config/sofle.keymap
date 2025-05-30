@@ -116,14 +116,6 @@
         };
     };
 
-    behaviors {
-        rot_scroll: rot_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -142,7 +134,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -150,9 +142,9 @@
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
   &kp C_MUTE &kp C_VOLUME_DOWN&kp C_VOLUME_UP &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PP                                    &kp C_PREV    &kp C_NEXT    &trans        &trans        &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &mkp MB2      &mmv MOVE_UP   &mkp MB1      &trans        &trans                                      &trans        &kp N7        &kp N8        &kp N9        &trans        &trans
+    &trans        &mkp MB2      &mmv MOVE_UP   &mkp MB1    &msc SCRL_UP   &trans                                      &trans        &kp N7        &kp N8        &kp N9        &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans       &trans                                      &trans        &kp N4        &kp N5        &kp N6        &trans        &trans
+    &trans     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCROL_DOWN &trans                                   &trans        &kp N4        &kp N5        &kp N6        &trans        &trans
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &trans        &trans        &trans        &trans        &trans        &trans        &trans          &kp RALT      &trans        &kp N1        &kp N2        &kp N3        &trans        &trans
 //╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
@@ -160,7 +152,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -178,7 +170,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         adjust_layer {
@@ -196,7 +188,7 @@
 //                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
-            sensor-bindings = <&rot_scroll &rot_scroll>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
