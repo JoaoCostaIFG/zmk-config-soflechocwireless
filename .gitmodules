@@ -1,0 +1,3 @@
+[submodule "SofleChocWireless"]
+	path = SofleChocWireless
+	url = https://github.com/db-ok/SofleChocWireless.git
