@@ -1,5 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+// Based on https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/sofle/boards/nice_nano_v2.overlay
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
