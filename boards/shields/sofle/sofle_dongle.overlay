@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-
-// Based on https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/sofle/boards/nice_nano_v2.overlay
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
@@ -20,11 +19,6 @@
         compatible = "zmk,matrix-transform";
         columns = <16>;
         rows = <4>;
-// | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |                 | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |
-// | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |                 | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |
-// | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |                 | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 |
-// | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |   | SW25 | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |
-//               | SW30 | SW29 | SW28 | SW27 | SW26 |   | SW26 | SW27 | SW28 | SW29 | SW30 |
         map = <
 RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)                 RC(0,6) RC(0,7) RC(0,8)  RC(0,9) RC(0,10) RC(0,11)
 RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)                 RC(1,6) RC(1,7) RC(1,8)  RC(1,9) RC(1,10) RC(1,11)
@@ -38,6 +32,73 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
+        keys = <
+// Row 0: number row (12 keys, left then right)
+            &key_physical_attrs 100 100   0   0 0 0 0
+            &key_physical_attrs 100 100 100  25 0 0 0
+            &key_physical_attrs 100 100 200  50 0 0 0
+            &key_physical_attrs 100 100 300  75 0 0 0
+            &key_physical_attrs 100 100 400  88 0 0 0
+            &key_physical_attrs 100 100 500 100 0 0 0
+            &key_physical_attrs 100 100 700 100 0 0 0
+            &key_physical_attrs 100 100 800  88 0 0 0
+            &key_physical_attrs 100 100 900  75 0 0 0
+            &key_physical_attrs 100 100 1000 50 0 0 0
+            &key_physical_attrs 100 100 1100 25 0 0 0
+            &key_physical_attrs 100 100 1200  0 0 0 0
+// Row 1: QWERTY row
+            &key_physical_attrs 100 100   0 100 0 0 0
+            &key_physical_attrs 100 100 100 125 0 0 0
+            &key_physical_attrs 100 100 200 150 0 0 0
+            &key_physical_attrs 100 100 300 175 0 0 0
+            &key_physical_attrs 100 100 400 188 0 0 0
+            &key_physical_attrs 100 100 500 200 0 0 0
+            &key_physical_attrs 100 100 700 200 0 0 0
+            &key_physical_attrs 100 100 800 188 0 0 0
+            &key_physical_attrs 100 100 900 175 0 0 0
+            &key_physical_attrs 100 100 1000 150 0 0 0
+            &key_physical_attrs 100 100 1100 125 0 0 0
+            &key_physical_attrs 100 100 1200 100 0 0 0
+// Row 2: home row
+            &key_physical_attrs 100 100   0 200 0 0 0
+            &key_physical_attrs 100 100 100 225 0 0 0
+            &key_physical_attrs 100 100 200 250 0 0 0
+            &key_physical_attrs 100 100 300 275 0 0 0
+            &key_physical_attrs 100 100 400 288 0 0 0
+            &key_physical_attrs 100 100 500 300 0 0 0
+            &key_physical_attrs 100 100 700 300 0 0 0
+            &key_physical_attrs 100 100 800 288 0 0 0
+            &key_physical_attrs 100 100 900 275 0 0 0
+            &key_physical_attrs 100 100 1000 250 0 0 0
+            &key_physical_attrs 100 100 1100 225 0 0 0
+            &key_physical_attrs 100 100 1200 200 0 0 0
+// Row 3: bottom row left half (6) + left encoder + right encoder + right half (6)
+            &key_physical_attrs 100 100   0 300 0 0 0
+            &key_physical_attrs 100 100 100 325 0 0 0
+            &key_physical_attrs 100 100 200 350 0 0 0
+            &key_physical_attrs 100 100 300 375 0 0 0
+            &key_physical_attrs 100 100 400 388 0 0 0
+            &key_physical_attrs 100 100 500 400 0 0 0
+            &key_physical_attrs 100 100 550 400 0 0 0
+            &key_physical_attrs 100 100 650 400 0 0 0
+            &key_physical_attrs 100 100 700 400 0 0 0
+            &key_physical_attrs 100 100 800 388 0 0 0
+            &key_physical_attrs 100 100 900 375 0 0 0
+            &key_physical_attrs 100 100 1000 350 0 0 0
+            &key_physical_attrs 100 100 1100 325 0 0 0
+            &key_physical_attrs 100 100 1200 300 0 0 0
+// Row 4: thumb cluster (5 left + 5 right)
+            &key_physical_attrs 100 100 100 450 0 0 0
+            &key_physical_attrs 100 100 200 450 0 0 0
+            &key_physical_attrs 100 100 300 450 0 0 0
+            &key_physical_attrs 100 100 400 450 0 0 0
+            &key_physical_attrs 100 100 500 450 0 0 0
+            &key_physical_attrs 100 100 700 450 0 0 0
+            &key_physical_attrs 100 100 800 450 0 0 0
+            &key_physical_attrs 100 100 900 450 0 0 0
+            &key_physical_attrs 100 100 1000 450 0 0 0
+            &key_physical_attrs 100 100 1100 450 0 0 0
+        >;
     };
 };
 
