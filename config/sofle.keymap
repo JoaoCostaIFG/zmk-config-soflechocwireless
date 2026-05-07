@@ -106,6 +106,12 @@
             bindings = <&mkp MB5>;
             layers = <1>;
         };
+        combo_bootloader_left {
+            // Pressing the 3 first keys on the keyboard will trigger &bootloader
+            timeout-ms = <50>;
+            key-positions = <0 1 2>;
+            bindings = <&bootloader>;
+        };
     };
 
     conditional_layers {
