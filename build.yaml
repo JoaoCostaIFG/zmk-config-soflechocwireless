@@ -4,7 +4,7 @@ include:
     shield: settings_reset
 
   - board: nice_nano//zmk
-    shield: sofle_dongle
+    shield: sofle_dongle dongle_display
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
       -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n
